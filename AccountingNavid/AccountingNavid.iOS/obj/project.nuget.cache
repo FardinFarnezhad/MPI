@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "JYXki7mW5qyPhYrnGbhuE3MqPCY1CmFWkgHtZlfGy1xs99eDaINNE3A912/zp5OpdWxWE21ASQMm4tjDTxskgg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\FFard\\OneDrive\\Desktop\\Codes\\AccountingNavid\\AccountingNavid\\AccountingNavid.iOS\\AccountingNavid.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\FFard\\.nuget\\packages\\modernhttpclient\\2.4.2\\modernhttpclient.2.4.2.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\newtonsoft.json\\6.0.4\\newtonsoft.json.6.0.4.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.3\\sqlitepclraw.provider.dynamic_cdecl.2.0.3.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\xamarin.essentials\\1.6.0\\xamarin.essentials.1.6.0.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\xamarin.forms.customtitlepickerplugin\\1.0.2\\xamarin.forms.customtitlepickerplugin.1.0.2.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\xamarin.forms.pages\\2.3.0.38-pre2\\xamarin.forms.pages.2.3.0.38-pre2.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\xamarin.forms.theme.base\\1.0.0.43-pre1\\xamarin.forms.theme.base.1.0.0.43-pre1.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\xamarin.forms.theme.dark\\1.0.0.43-pre1\\xamarin.forms.theme.dark.1.0.0.43-pre1.nupkg.sha512",
+    "C:\\Users\\FFard\\.nuget\\packages\\xamarin.forms.theme.light\\1.0.0.43-pre1\\xamarin.forms.theme.light.1.0.0.43-pre1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:light="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Light"
+             xmlns:dark="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Dark"
+             x:Class="AccountingNavid.App"
+             xmlns:command="clr-namespace:AccountingNavid.DataLayer.Cummon.Commands"
+             >
+    <Application.Resources>
+        <!--<ResourceDictionary MergedWith="dark:DarkThemeResources"/>-->
+        <!--<ResourceDictionary MergedWith="light:LightThemeResources"/>-->
+        <ResourceDictionary>
+            <command:NavigateToReportFilterPageCommand x:Key="NavigateToReportFilterPageCommand"/>
+            <command:NavigateToReportPageCommand x:Key="NavigateToReportPageCommand"/>
+            <command:NavigateToSettingsCommand x:Key="NavigateToSettingsCommand"/>
+            <command:NavigateToTransactionAddOrEditPageCommand x:Key="NavigateToTransactionAddOrEditPageCommand"/>
+            <command:NavigateToTransactionPageCommand x:Key="NavigateToTransactionPageCommand"/>
+            <command:NavigateToTransactionListPageCommand x:Key="NavigateToTransactionListPageCommand"/>
+            <command:NavigateToTransitionFilterPageCommand x:Key="NavigateToTransitionFilterPageCommand"/>
+            <command:NavigateToBankAccountListPageCommand x:Key="NavigateToBankAccountListPageCommand"/>
+            <command:NavigateToContactCommand x:Key="NavigateToContactCommand"/>
+            <command:NavigateToContactAddOrEditPageCommand x:Key="NavigateToContactAddOrEditPageCommand"/>
+            <command:NavigateToContactListCommand x:Key="NavigateToContactListCommand"/>
+            <command:NavigateToBankAccountAddOrEditPageCommand x:Key="NavigateToBankAccountAddOrEditPageCommand"/>
+            <command:NavigateToTransactionFilterDatePageCommand x:Key="NavigateToTransactionFilterDatePageCommand"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

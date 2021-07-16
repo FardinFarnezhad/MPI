@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AccountingNavid.Pages.ContactList"
+             FlowDirection="RightToLeft"
+             xmlns:local ="clr-namespace:AccountingNavid"
+             Title="لیست طرف حسابان"
+                          NavigationPage.BackButtonTitle="بازگشت"
+
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="افزودن مخاطب" IconImageSource="AddIcon.png" Command="{StaticResource NavigateToContactAddOrEditPageCommand}" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <RefreshView x:Name="MyContactRefreshView">
+        <ListView x:Name="MyContactList"
+        Margin="5"   
+        ItemsSource="{Binding GroupedData}" 
+         IsGroupingEnabled="True"        
+        GroupDisplayBinding="{Binding Key}"
+        HasUnevenRows="True"
+        ItemTapped="ContactItemTapped"
+        >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="5,5" Margin="5,5">
+                            <Label Text="{Binding Name}" TextColor="#00B7BB" FontSize="Medium" FontFamily="FarsiFont" HorizontalTextAlignment="Start"/>
+                            <Label Text="{Binding Phone1}" FontSize="Medium" FontFamily="FarsiFont" HorizontalTextAlignment="Start"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </RefreshView>
+</ContentPage>

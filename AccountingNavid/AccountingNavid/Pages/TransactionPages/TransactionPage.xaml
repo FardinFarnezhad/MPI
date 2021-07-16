@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AccountingNavid.Pages.TransactionPage"
+             Style="{x:DynamicResource Title Style }"
+             FlowDirection="RightToLeft"
+                          NavigationPage.BackButtonTitle="بازگشت"
+
+             Title="جزئیات تراکنش"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="EditTransactionIcon.png" Text="ویرایش" Order="Primary" Command="{StaticResource NavigateToTransactionAddOrEditPageCommand}"/>
+        <ToolbarItem IconImageSource="DeleteIcon.png" Text="حذف" Order="Primary" Clicked="BtnDelte"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <TableView RowHeight="90" HasUnevenRows="True" Intent="Data">
+            <TableRoot>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="طرف حساب : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" x:Name="contactName" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <Label Text="نوع تراکنش : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" x:Name="TransactionType" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="مبلغ : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label Text="{Binding Amount ,StringFormat='{0:N0} ریال'}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" x:Name="TransactionAmount" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="توضیحات : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label Text="{Binding Description}" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" x:Name="TransactionDescription" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="تاریخ : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" x:Name="TransactionDate" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="شماره کارت : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" x:Name="MyBankAccountNumber" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <Label Text="شماره پیگیری  : " FontSize="Medium" FontFamily="FarsiFont" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding TrackingNumber}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" FontFamily="FarsiFont" FlowDirection="RightToLeft" x:Name="TrackingNumber"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="SharePhoto"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="{Binding ImagePath}" Aspect="AspectFill" HeightRequest="320" WidthRequest="640" x:Name="TransactionImage"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

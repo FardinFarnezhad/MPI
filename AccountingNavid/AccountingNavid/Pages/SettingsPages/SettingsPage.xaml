@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AccountingNavid.Pages.SettingsPage"
+             Title="تنظیمات"
+             FlowDirection="RightToLeft"
+                          NavigationPage.BackButtonTitle="بازگشت"
+
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:Double" x:Key="xSwitchDarkTheme">
+                <On Platform="Android" Value="-160" />
+                <On Platform="iOS" Value="-160"/>
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <TableView HasUnevenRows="True" Intent="Settings">
+            <TableRoot>
+                <TableSection Title="تنظیمات شخصی" >
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <Button Text="مدیریت کارت ها" FontSize="Medium" Command="{StaticResource NavigateToBankAccountListPageCommand}" CommandParameter="0" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="تنظیمات برنامه">
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <Button Text="پاک کردن تمامی اطلاعات" FontSize="Medium" FontFamily="FarsiFont" Clicked="DeleteTransactionsTable"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AccountingNavid.Pages.SettingsPages.BankAccountPage"
+             Title="جزئیات حساب بانکی"
+                          NavigationPage.BackButtonTitle="بازگشت"
+
+             FlowDirection="RightToLeft"
+             >
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="EditIcon.png" Text="ویرایش" Order="Primary" Command="{StaticResource NavigateToBankAccountAddOrEditPageCommand}"/>
+        <ToolbarItem IconImageSource="DeleteIcon.png" Text="حذف" Order="Primary" Clicked="BtnDelete"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <TableView RowHeight="90" HasUnevenRows="True" Intent="Data">
+            <TableRoot>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="شماره کارت : " FontFamily="FarsiFont" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding CardNumber}" FontFamily="FarsiFont" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="شماره حساب : " FontFamily="FarsiFont" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding AccountNumber}" FontFamily="FarsiFont" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="بانک : " FontFamily="FarsiFont" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding BankName}" FontFamily="FarsiFont" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="موجودی : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" x:Name="MyBankAccountBalance" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

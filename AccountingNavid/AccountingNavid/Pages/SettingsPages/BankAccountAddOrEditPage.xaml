@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AccountingNavid.Pages.SettingsPages.BankAccountAddOrEditPage"
+             xmlns:local="clr-namespace:AccountingNavid.Utility"
+             Title="افزودن حساب بانکی"
+                          NavigationPage.BackButtonTitle="بازگشت"
+
+             FlowDirection="RightToLeft"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="SubmitIcon.png" Text="ثبت" Order="Primary" Clicked="ButtonAddOrEdit"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <TableView HasUnevenRows="True" Intent="Data">
+            <TableRoot>
+                <TableSection Title="مشخصات کارت">
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <Label Text="*شماره کارت : " FontFamily="FarsiFont" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                            <local:NumberEntry Text="{Binding CardNumber}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" x:Name="MyBankCardNumber" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <Label Text="شماره حساب : " FontFamily="FarsiFont" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                            <local:NumberEntry Text="{Binding AccountNumber}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" x:Name="MyBankAccountNumber" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <Label Text="*بانک : " FontFamily="FarsiFont" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                            <Entry Text="{Binding BankName}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"  x:Name="MyBankAccountName" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <Label Text="*موجودی اولیه (ریال) : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont" x:Name="MyBankAccountAccountBalanceLabel"/>
+                            <local:NumberEntry TextChanged="MyBankAccountAccountBalance_TextChanged" Text="{Binding AccountBalance ,StringFormat='{0:N0}'}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" FontFamily="FarsiFont" x:Name="MyBankAccountAccountBalance"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

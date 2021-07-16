@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AccountingNavid.Pages.BankAcoountList"
+             Title="لیست کارت ها"
+             FlowDirection="LeftToRight"
+                          NavigationPage.BackButtonTitle="بازگشت"
+
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="افزودن مخاطب" IconImageSource="AddCreditIcon.png" Command="{StaticResource NavigateToBankAccountAddOrEditPageCommand}" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <RefreshView x:Name="MyBankAccountRefreshView"> 
+    <ListView x:Name="MyBankAccountList"
+        Margin="5" 
+        HasUnevenRows="True"
+        ItemTapped="MyBankAccountList_ItemTapped"
+        >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="5,5" Margin="5,5">
+                            <Label Text="{Binding CardNumber}" TextColor="#00B7BB" FontSize="Medium" FontFamily="FarsiFont" HorizontalTextAlignment="Start"/>
+                            <Label Text="{Binding BankName}" FontSize="Medium" FontFamily="FarsiFont" HorizontalTextAlignment="Start"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </RefreshView>
+</ContentPage>

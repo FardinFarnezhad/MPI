@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customTitlePicker="clr-namespace:Plugin.CustomTitlePicker.Shared;assembly=Plugin.CustomTitlePicker"
+             x:Class="AccountingNavid.Pages.TransactionPages.TransactionFilterDatePage"
+             FlowDirection="RightToLeft"
+                          NavigationPage.BackButtonTitle="بازگشت"
+Title="انتخاب تاریخ دلخواه"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="SubmitIcon.png" Text="ثبت" Order="Primary" Clicked="BtnFilter"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <TableView HasUnevenRows="True" Intent="Data">
+            <TableRoot>
+                <TableSection Title="تاریخ تراکنش">
+                    <ViewCell>
+                        <Grid Margin="10,10" Padding="10,10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="از تاریخ :" Grid.Row="0" Grid.ColumnSpan="3" FontSize="Medium" FontFamily="FarsiFont" HorizontalTextAlignment="Center"/>
+                            <customTitlePicker:TitlePicker Grid.Row="1" Grid.Column="2" DoneButtonText="ثبت" CancelButtonText="لغو" HorizontalTextAlignment="Center" Title="سال" x:Name="YearFromDatePicker" FontFamily="FarsiFont">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:Int32}">
+                                        <x:Int32>1378</x:Int32>
+                                        <x:Int32>1379</x:Int32>
+                                        <x:Int32>1380</x:Int32>
+                                        <x:Int32>1381</x:Int32>
+                                        <x:Int32>1382</x:Int32>
+                                        <x:Int32>1383</x:Int32>
+                                        <x:Int32>1384</x:Int32>
+                                        <x:Int32>1385</x:Int32>
+                                        <x:Int32>1386</x:Int32>
+                                        <x:Int32>1387</x:Int32>
+                                        <x:Int32>1388</x:Int32>
+                                        <x:Int32>1389</x:Int32>
+                                        <x:Int32>1390</x:Int32>
+                                        <x:Int32>1391</x:Int32>
+                                        <x:Int32>1392</x:Int32>
+                                        <x:Int32>1393</x:Int32>
+                                        <x:Int32>1394</x:Int32>
+                                        <x:Int32>1395</x:Int32>
+                                        <x:Int32>1396</x:Int32>
+                                        <x:Int32>1397</x:Int32>
+                                        <x:Int32>1398</x:Int32>
+                                        <x:Int32>1399</x:Int32>
+                                        <x:Int32>1400</x:Int32>
+                                        <x:Int32>1401</x:Int32>
+                                        <x:Int32>1402</x:Int32>
+                                        <x:Int32>1403</x:Int32>
+                                        <x:Int32>1404</x:Int32>
+                                        <x:Int32>1405</x:Int32>
+                                        <x:Int32>1406</x:Int32>
+                                        <x:Int32>1407</x:Int32>
+                                        <x:Int32>1408</x:Int32>
+                                        <x:Int32>1409</x:Int32>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </customTitlePicker:TitlePicker>
+                       
+                            <customTitlePicker:TitlePicker Grid.Row="1" Grid.Column="1" DoneButtonText="ثبت" CancelButtonText="لغو" HorizontalTextAlignment="Center" Title="ماه" x:Name="MonthFromDatePicker" FontFamily="FarsiFont">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>فروردین</x:String>
+                                        <x:String>اردیبهشت</x:String>
+                                        <x:String>خرداد</x:String>
+                                        <x:String>تیر</x:String>
+                                        <x:String>مرداد</x:String>
+                                        <x:String>شهریور</x:String>
+                                        <x:String>مهر</x:String>
+                                        <x:String>آبان</x:String>
+                                        <x:String>آذر</x:String>
+                                        <x:String>دی</x:String>
+                                        <x:String>بهمن</x:String>
+                                        <x:String>اسفند</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </customTitlePicker:TitlePicker>
+                            <customTitlePicker:TitlePicker Grid.Row="1" Grid.Column="0" DoneButtonText="ثبت" CancelButtonText="لغو" HorizontalTextAlignment="Center" Title="روز" x:Name="DayFromDatePicker" FontFamily="FarsiFont">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:Int32}">
+                                        <x:Int32>1</x:Int32>
+                                        <x:Int32>2</x:Int32>
+                                        <x:Int32>3</x:Int32>
+                                        <x:Int32>4</x:Int32>
+                                        <x:Int32>5</x:Int32>
+                                        <x:Int32>6</x:Int32>
+                                        <x:Int32>7</x:Int32>
+                                        <x:Int32>8</x:Int32>
+                                        <x:Int32>9</x:Int32>
+                                        <x:Int32>10</x:Int32>
+                                        <x:Int32>11</x:Int32>
+                                        <x:Int32>12</x:Int32>
+                                        <x:Int32>13</x:Int32>
+                                        <x:Int32>14</x:Int32>
+                                        <x:Int32>15</x:Int32>
+                                        <x:Int32>16</x:Int32>
+                                        <x:Int32>17</x:Int32>
+                                        <x:Int32>18</x:Int32>
+                                        <x:Int32>19</x:Int32>
+                                        <x:Int32>20</x:Int32>
+                                        <x:Int32>21</x:Int32>
+                                        <x:Int32>22</x:Int32>
+                                        <x:Int32>23</x:Int32>
+                                        <x:Int32>24</x:Int32>
+                                        <x:Int32>25</x:Int32>
+                                        <x:Int32>26</x:Int32>
+                                        <x:Int32>27</x:Int32>
+                                        <x:Int32>28</x:Int32>
+                                        <x:Int32>29</x:Int32>
+                                        <x:Int32>30</x:Int32>
+                                        <x:Int32>31</x:Int32>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </customTitlePicker:TitlePicker>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <Label Text="از ساعت :" FontSize="Medium" FontFamily="FarsiFont" HorizontalTextAlignment="Center"/>
+                            <TimePicker x:Name="FromTimePicker" Format="HH:mm" FontFamily="FarsiFont" FontSize="Medium" HorizontalOptions="CenterAndExpand" ></TimePicker>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid Margin="10,10" Padding="10,10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="تا تاریخ :" Grid.Row="0" Grid.ColumnSpan="3" FontSize="Medium" FontFamily="FarsiFont" HorizontalTextAlignment="Center"/>
+                            <customTitlePicker:TitlePicker Grid.Row="1" Grid.Column="2" DoneButtonText="ثبت" CancelButtonText="لغو" HorizontalTextAlignment="Center" Title="سال" x:Name="YearToDatePicker" FontFamily="FarsiFont">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:Int32}">
+                                        <x:Int32>1378</x:Int32>
+                                        <x:Int32>1379</x:Int32>
+                                        <x:Int32>1380</x:Int32>
+                                        <x:Int32>1381</x:Int32>
+                                        <x:Int32>1382</x:Int32>
+                                        <x:Int32>1383</x:Int32>
+                                        <x:Int32>1384</x:Int32>
+                                        <x:Int32>1385</x:Int32>
+                                        <x:Int32>1386</x:Int32>
+                                        <x:Int32>1387</x:Int32>
+                                        <x:Int32>1388</x:Int32>
+                                        <x:Int32>1389</x:Int32>
+                                        <x:Int32>1390</x:Int32>
+                                        <x:Int32>1391</x:Int32>
+                                        <x:Int32>1392</x:Int32>
+                                        <x:Int32>1393</x:Int32>
+                                        <x:Int32>1394</x:Int32>
+                                        <x:Int32>1395</x:Int32>
+                                        <x:Int32>1396</x:Int32>
+                                        <x:Int32>1397</x:Int32>
+                                        <x:Int32>1398</x:Int32>
+                                        <x:Int32>1399</x:Int32>
+                                        <x:Int32>1400</x:Int32>
+                                        <x:Int32>1401</x:Int32>
+                                        <x:Int32>1402</x:Int32>
+                                        <x:Int32>1403</x:Int32>
+                                        <x:Int32>1404</x:Int32>
+                                        <x:Int32>1405</x:Int32>
+                                        <x:Int32>1406</x:Int32>
+                                        <x:Int32>1407</x:Int32>
+                                        <x:Int32>1408</x:Int32>
+                                        <x:Int32>1409</x:Int32>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </customTitlePicker:TitlePicker>
+                            <customTitlePicker:TitlePicker Grid.Row="1" Grid.Column="1" DoneButtonText="ثبت" CancelButtonText="لغو" HorizontalTextAlignment="Center" Title="ماه" x:Name="MonthToDatePicker" FontFamily="FarsiFont">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>فروردین</x:String>
+                                        <x:String>اردیبهشت</x:String>
+                                        <x:String>خرداد</x:String>
+                                        <x:String>تیر</x:String>
+                                        <x:String>مرداد</x:String>
+                                        <x:String>شهریور</x:String>
+                                        <x:String>مهر</x:String>
+                                        <x:String>آبان</x:String>
+                                        <x:String>آذر</x:String>
+                                        <x:String>دی</x:String>
+                                        <x:String>بهمن</x:String>
+                                        <x:String>اسفند</x:String>
+                                    </x:Array>          
+                                </Picker.ItemsSource>
+                            </customTitlePicker:TitlePicker>
+
+                            <customTitlePicker:TitlePicker Grid.Row="1" Grid.Column="0" DoneButtonText="ثبت" CancelButtonText="لغو" HorizontalTextAlignment="Center" Title="روز" x:Name="DayToDatePicker" FontFamily="FarsiFont">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:Int32}">
+                                        <x:Int32>1</x:Int32>
+                                        <x:Int32>2</x:Int32>
+                                        <x:Int32>3</x:Int32>
+                                        <x:Int32>4</x:Int32>
+                                        <x:Int32>5</x:Int32>
+                                        <x:Int32>6</x:Int32>
+                                        <x:Int32>7</x:Int32>
+                                        <x:Int32>8</x:Int32>
+                                        <x:Int32>9</x:Int32>
+                                        <x:Int32>10</x:Int32>
+                                        <x:Int32>11</x:Int32>
+                                        <x:Int32>12</x:Int32>
+                                        <x:Int32>13</x:Int32>
+                                        <x:Int32>14</x:Int32>
+                                        <x:Int32>15</x:Int32>
+                                        <x:Int32>16</x:Int32>
+                                        <x:Int32>17</x:Int32>
+                                        <x:Int32>18</x:Int32>
+                                        <x:Int32>19</x:Int32>
+                                        <x:Int32>20</x:Int32>
+                                        <x:Int32>21</x:Int32>
+                                        <x:Int32>22</x:Int32>
+                                        <x:Int32>23</x:Int32>
+                                        <x:Int32>24</x:Int32>
+                                        <x:Int32>25</x:Int32>
+                                        <x:Int32>26</x:Int32>
+                                        <x:Int32>27</x:Int32>
+                                        <x:Int32>28</x:Int32>
+                                        <x:Int32>29</x:Int32>
+                                        <x:Int32>30</x:Int32>
+                                        <x:Int32>31</x:Int32>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </customTitlePicker:TitlePicker>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <Label Text="تا ساعت :" FontSize="Medium" FontFamily="FarsiFont" HorizontalTextAlignment="Center"/>
+                            <TimePicker x:Name="ToTimePicker" Format="HH:mm" FontFamily="FarsiFont" FontSize="Medium" HorizontalOptions="CenterAndExpand"></TimePicker>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

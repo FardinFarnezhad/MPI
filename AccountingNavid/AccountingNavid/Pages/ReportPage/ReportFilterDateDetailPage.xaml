@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             FlowDirection="RightToLeft"
+                          NavigationPage.BackButtonTitle="بازگشت"
+             x:Class="AccountingNavid.Pages.ReportPage.ReportFilterDateDetailPage"
+                          Title="آمار در تاریخ دلخواه"   
+             >
+    <ContentPage.Content>
+        <TableView RowHeight="90" HasUnevenRows="True" Intent="Data" x:Name="ReportTable">
+            <TableRoot>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="از تاریخ : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" FontFamily="FarsiFont" x:Name="FromDate" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="تا تاریخ : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" FontFamily="FarsiFont" x:Name="ToDate" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="جمع دریافتی ها : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label Text="{Binding Income,StringFormat='{0:N0} ریال'}" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="جمع پرداختی ها : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label Text="{Binding Pay,StringFormat='{0:N0} ریال'}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="برآورد تراکنش ها : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont" x:Name="Balance"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="طرف حساب با بیشترین تراکنش : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" FontFamily="FarsiFont" x:Name="ContactName"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="تعداد تراکنش ها : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label Text ="{Binding ContactCount}" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="شماره کارت با بیشترین تراکنش : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" FontFamily="FarsiFont" x:Name="BankAccount"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Margin="10,10" Padding="10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="CopyText"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="تعداد تراکنش ها : " FontSize="Medium" HorizontalTextAlignment="Center" FontFamily="FarsiFont"/>
+                            <Label Text ="{Binding BankAccountCount}" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" FontFamily="FarsiFont"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

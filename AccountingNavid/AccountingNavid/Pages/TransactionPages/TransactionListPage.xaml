@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AccountingNavid.Pages.TransactionListPage"
+             Title="لیست تراکنش ها"
+                          NavigationPage.BackButtonTitle="بازگشت"
+
+             FlowDirection="RightToLeft"
+             >
+    <RefreshView x:Name="TransactionRefreshView">
+    <ListView x:Name="MyTransactionList"
+        Margin="5"   
+        ItemsSource="{Binding TransactionsFilterListAsync}"  
+        HasUnevenRows="True"
+        ItemTapped="MyTransactionList_ItemTapped"
+        >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10,10" Margin="10,10">
+                        <Label Text="{Binding Name}" FontSize="Large" TextColor="#00B7BB" FontFamily="FarsiFont" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="{Binding TransactionType}" FontSize="Medium" FontFamily="FarsiFont" HorizontalOptions="Center"/>
+                        <Label Text="{Binding Amount ,StringFormat='{0:N0} ریال'}" FontFamily="FarsiFont" FontSize="Medium" HorizontalOptions="Center"/>
+                        <Label Text="{Binding Date}" FontSize="Medium" FontFamily="FarsiFont" HorizontalOptions="Center"/>
+                        <Label Text="{Binding CardNumber}" FontSize="Medium" FontFamily="FarsiFont" HorizontalOptions="Center"/>
+                        <Label Text="{Binding BankName}" FontSize="Medium" FontFamily="FarsiFont" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </RefreshView>
+</ContentPage>
